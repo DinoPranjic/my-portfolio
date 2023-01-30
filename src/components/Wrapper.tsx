@@ -1,9 +1,9 @@
-import { ReactComponentElement, ReactNode } from "react";
+import { ReactNode } from "react";
 import styled from "styled-components";
 
 const WrapperContainer = styled.div`
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 100px;
+  padding-right: 100px;
   margin: 0 auto;
 
 `
