@@ -63,13 +63,13 @@ const intro = [
   <Line>Hi, I'm Dino.</Line>,
   <Line>I'm a Software Developer</Line>,
   <Line>based in Ontario, Canada.</Line>
-]
+];
 
 const Socials = () => {
   return(
     <SocialsContainer>
       {socials.map((icon) => (
-        <a href={icon.url} target='_blank'>
+        <a href={icon.url} target='_blank' rel="noreferrer">
           {icon.svg}
         </a>
       ))}
@@ -84,6 +84,7 @@ const Header = () => {
     <>
     <Nav>
     <Socials />
+    {/* Links to about, projects, skills, contact */}
     </Nav>
 
     <Wrapper>
