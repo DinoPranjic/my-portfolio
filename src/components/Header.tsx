@@ -4,47 +4,88 @@ import Wrapper from './Wrapper';
 
 import { GithubIcon, LinkedInIcon, LaptopAndCat} from "../assets"
 
+import theme from "../utils/theme";
+
 const SocialsContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
   svg {
+    display: inline-block;
     height: 30px;
     width: 30px;
-    margin-left: 2px;
+    margin-right: 5px;
   }
 `
 
-const Nav = styled.div`
+const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding: 25px 25px 0 25px;
+`
+
+const LinksContainer = styled.div`
+  flex: 0.3;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: ${theme.colours.purplePrimary};
+    font-family: ${theme.fonts.main};
+    font-weight: 800;
+  }
 `
 
 const Line = styled.span`
   display: block;
   width: 100%;
-  max-width: calc(100vw - 50px);
+  /* max-width: calc(100vw - 50px); */
+`
+
+const IntroTextAccent = styled.span`
+  display: inline-block;
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100% + 10px);
+    height: 35%;
+    bottom: 5px;
+    left: -5px;
+    background-color: ${theme.colours.purpleAccent};
+
+  }
 `
 
 const IntroText = styled.h1`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  margin-top: 20vh;
+  font-family: ${theme.fonts.main};
+  font-size: 40px;
+  padding-bottom: 10vh;
 
 `
 
 const IntroContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 34px);
 `
 
 const ImageContainer = styled.div`
-  display: flex;
-  align-items: flex-end;
-  margin-top: 20vh;
+  position: absolute;
+  z-index: -1;
+  width: 40vw;
+  right: 100px;
+  bottom: 0;
+
+  svg {
+    width: 100%;
+  }
 
 `
 
@@ -61,7 +102,7 @@ const socials = [
 
 const intro = [
   <Line>Hi, I'm Dino.</Line>,
-  <Line>I'm a Software Developer</Line>,
+  <Line>I'm a <IntroTextAccent>software developer</IntroTextAccent></Line>,
   <Line>based in Ontario, Canada.</Line>
 ];
 
@@ -81,24 +122,29 @@ const Header = () => {
 
 
   return(
-    <>
-    <Nav>
-    <Socials />
-    {/* Links to about, projects, skills, contact */}
-    </Nav>
+    <header>
+      <Nav>
+        <Socials />
+        <LinksContainer>
+          <a href='#'>about</a>
+          <a href='#'>projects</a>
+          <a href='#'>skills</a>
+          <a href='#'>contact</a>
+        </LinksContainer>
+      </Nav>
 
     <Wrapper>
       <IntroContainer>
-      <IntroText>
-        {intro.map((line) => line)}
-      </IntroText>
+        <IntroText>
+          {intro.map((line) => line)}
+        </IntroText>
       <ImageContainer>
-      <LaptopAndCat />
+        <LaptopAndCat />
       </ImageContainer>
       
       </IntroContainer>
     </Wrapper>
-    </>
+    </header>
   )
 }
 
