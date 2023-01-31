@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import Wrapper from './Wrapper';
 
-import { GithubIcon, LinkedInIcon, LaptopAndCat} from "../assets"
+import { GithubIcon, LinkedInIcon, LaptopAndCat, ScrollIndicator} from "../assets"
 
 import theme from "../utils/theme";
 
@@ -127,7 +127,7 @@ const Header = () => {
         <Socials />
         <LinksContainer>
           <a href='#about'>about</a>
-          <a href='#'>projects</a>
+          <a href='#projects'>projects</a>
           <a href='#'>skills</a>
           <a href='#'>contact</a>
         </LinksContainer>
@@ -141,7 +141,7 @@ const Header = () => {
       <ImageContainer>
         <LaptopAndCat />
       </ImageContainer>
-      
+        <ScrollIndicator />
       </IntroContainer>
     </Wrapper>
     </header>
