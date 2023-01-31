@@ -1,10 +1,12 @@
 const theme = {
   colours: {
     purplePrimary: '#732AEB',
-    purpleAccent: 'rgba(115, 42, 235, 0.22)'
+    purpleAccent: 'rgba(115, 42, 235, 0.22)',
+    purpleBackground: '#E0D0FB'
   },
   fonts: {
-    main: 'Arimo'
+    main: 'Arimo',
+    secondary: 'Roboto'
   }
 }
 
