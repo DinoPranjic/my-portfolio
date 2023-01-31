@@ -4,6 +4,7 @@ import { ReactComponent as LaptopAndCat } from './laptopandcat.svg';
 import { ReactComponent as ISSTrackerImage } from './iss-tracker-image.svg';
 import { ReactComponent as JabberImage } from './jabber-image.svg';
 import { ReactComponent as WSIETImage } from './wsiet-image.svg';
+import { ReactComponent as ScrollIndicator } from './scroll-indicator.svg';
 
 export {
   GithubIcon,
@@ -11,5 +12,6 @@ export {
   LaptopAndCat,
   ISSTrackerImage,
   JabberImage,
-  WSIETImage
+  WSIETImage,
+  ScrollIndicator
 };
