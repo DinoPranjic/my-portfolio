@@ -43,6 +43,7 @@ const BioParagraph = styled.p`
   font-weight: 500;
   color: ${theme.colours.font};
   margin-bottom: 20px;
+  text-align: center;
 `
 
 const paragraphs =  [
