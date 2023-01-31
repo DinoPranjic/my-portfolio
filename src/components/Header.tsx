@@ -126,7 +126,7 @@ const Header = () => {
       <Nav>
         <Socials />
         <LinksContainer>
-          <a href='#'>about</a>
+          <a href='#about'>about</a>
           <a href='#'>projects</a>
           <a href='#'>skills</a>
           <a href='#'>contact</a>
