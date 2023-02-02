@@ -35,6 +35,10 @@ const LinksContainer = styled.div`
     color: ${theme.colours.purplePrimary};
     font-family: ${theme.fonts.main};
     font-weight: 800;
+
+    :hover {
+      color: ${theme.colours.buttonHover};
+    }
   }
 `
 
@@ -76,13 +80,13 @@ const IntroContainer = styled.div`
   justify-content: center;
   height: calc(100vh - 34px);
 
-  .scroll-container {
+`
+
+const ScrollContainer = styled.div`
     display: flex;
     justify-content: center;
-    position: relative;
 
-  }
-  .scroll {
+    .scroll {
     animation: MoveUpDown 2s linear infinite;
 
   }
@@ -92,7 +96,7 @@ const IntroContainer = styled.div`
       transform: translateY(125px);
     }
     50% {
-      transform: translateY(75px);
+      transform: translateY(100px);
     }
 }
 `
@@ -108,13 +112,6 @@ const ImageContainer = styled.div`
     width: 100%;
   }
 
-`
-
-const ScrollText = styled.span`
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-family: ${theme.fonts.secondary};
-  color: ${theme.colours.font};
 `
 
 const socials = [
@@ -169,11 +166,9 @@ const Header = () => {
       <ImageContainer>
         <LaptopAndCat />
       </ImageContainer>
-        <div className='scroll-container'>
-        <ScrollIndicator className='scroll' />
-        {/* <ScrollText>Scroll</ScrollText> */}
-        </div>
-
+      <ScrollContainer>
+      <ScrollIndicator className='scroll' />
+      </ScrollContainer>
       </IntroContainer>
     </Wrapper>
     </header>
