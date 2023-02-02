@@ -39,7 +39,7 @@ const ProjectCard = styled.div`
   background-color: ${theme.colours.purpleBackground};
   padding: 25px 50px 25px 50px;
   border-radius: 28px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 `
 
 const ProjectInfo = styled.div`
@@ -89,10 +89,18 @@ const ProjectLink = styled.button`
   height: 40px;
   padding: 0 30px;
   margin-right: 20px;
+
+  a {
   color: #fff;
   font-family: ${theme.fonts.secondary};
   font-size: 18px;
   font-weight: bold;
+  }
+
+  :hover {
+    background: ${theme.colours.buttonHover};
+  }
+
 `
 
 const projects = [
@@ -159,34 +167,6 @@ const Projects = () => {
             </ProjectImage>
           </ProjectCard>
         ))}
-        {/* <ProjectCard>
-          <ProjectInfo>
-          <div>
-          <ProjectTitle>What Should I Eat Tonight?</ProjectTitle>
-          <ProjectStack>
-            React, Typescript, Styled-Components, REST API
-          </ProjectStack>
-          </div>
-          <div>
-          <ProjectDescription>
-          Returns a random recipe with full ingredients list, instructions and links to source and YouTube video.
-          </ProjectDescription>
-          </div>
-
-          <div>
-            <ProjectLink>
-              View Code
-            </ProjectLink>
-            <ProjectLink>
-              View Live
-            </ProjectLink>
-          </div>
-
-          </ProjectInfo>
-          <ProjectImage>
-          <WSIETImage />
-          </ProjectImage>
-        </ProjectCard> */}
         </ProjectsContainer>
       </Wrapper>
     </>
