@@ -33,13 +33,14 @@ const Header = styled.h2`
   }
 `
 
-const ProjectCard = styled.div`
+const ProjectCard = styled.div<{ isReversed: boolean }>`
   display: flex;
   justify-content: space-between;
   background-color: ${theme.colours.purpleBackground};
-  padding: 25px 50px 25px 50px;
+  padding: 50px;
   border-radius: 28px;
   margin-bottom: 100px;
+  ${(props) => props.isReversed && 'flex-direction: row-reverse;'}
 `
 
 const ProjectInfo = styled.div`
@@ -140,8 +141,8 @@ const Projects = () => {
           <Header id="projects">
             Projects
           </Header>
-        {projects.map((project) => (
-          <ProjectCard>
+        {projects.map((project, index) => (
+          <ProjectCard isReversed={index % 2 !== 0}>
             <ProjectInfo>
               <div>
                 <ProjectTitle>{project.title}</ProjectTitle>
