@@ -132,7 +132,33 @@ const Projects = () => {
           <Header id="projects">
             Projects
           </Header>
-        
+        {projects.map((project) => (
+          <ProjectCard>
+            <ProjectInfo>
+              <div>
+                <ProjectTitle>{project.title}</ProjectTitle>
+                <ProjectStack>{project.stack}</ProjectStack>
+              </div>
+
+              <div>
+                <ProjectDescription>{project.description}</ProjectDescription>
+              </div>
+
+              <div>
+                <ProjectLink>
+                  <a href={project.code} target="blank">View Code</a>
+                </ProjectLink>
+
+                <ProjectLink>
+                  <a href={project.live} target="blank">View Live</a>
+                </ProjectLink>
+              </div>
+            </ProjectInfo>
+            <ProjectImage>
+              {project.image}
+            </ProjectImage>
+          </ProjectCard>
+        ))}
         {/* <ProjectCard>
           <ProjectInfo>
           <div>
