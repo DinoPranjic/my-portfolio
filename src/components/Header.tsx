@@ -75,6 +75,20 @@ const IntroContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   height: calc(100vh - 34px);
+
+  .scroll {
+    animation: MoveUpDown 1s linear infinite;
+
+  }
+
+  @keyframes MoveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(50px);
+    }
+}
 `
 
 const ImageContainer = styled.div`
@@ -142,7 +156,7 @@ const Header = () => {
       <ImageContainer>
         <LaptopAndCat />
       </ImageContainer>
-        <ScrollIndicator />
+        <ScrollIndicator className='scroll' />
       </IntroContainer>
     </Wrapper>
     </header>
