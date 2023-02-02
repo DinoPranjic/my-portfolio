@@ -76,17 +76,23 @@ const IntroContainer = styled.div`
   justify-content: center;
   height: calc(100vh - 34px);
 
+  .scroll-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+  }
   .scroll {
-    animation: MoveUpDown 1s linear infinite;
+    animation: MoveUpDown 2s linear infinite;
 
   }
 
   @keyframes MoveUpDown {
     0%, 100% {
-      transform: translateY(0);
+      transform: translateY(125px);
     }
     50% {
-      transform: translateY(50px);
+      transform: translateY(75px);
     }
 }
 `
@@ -102,6 +108,13 @@ const ImageContainer = styled.div`
     width: 100%;
   }
 
+`
+
+const ScrollText = styled.span`
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: ${theme.fonts.secondary};
+  color: ${theme.colours.font};
 `
 
 const socials = [
@@ -156,7 +169,11 @@ const Header = () => {
       <ImageContainer>
         <LaptopAndCat />
       </ImageContainer>
+        <div className='scroll-container'>
         <ScrollIndicator className='scroll' />
+        {/* <ScrollText>Scroll</ScrollText> */}
+        </div>
+
       </IntroContainer>
     </Wrapper>
     </header>
