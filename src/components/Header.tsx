@@ -5,6 +5,7 @@ import Wrapper from './Wrapper';
 import { GithubIcon, LinkedInIcon, LaptopAndCat, ScrollIndicator} from "../assets"
 
 import theme from "../utils/theme";
+import React from "react";
 
 const SocialsContainer = styled.div`
   display: flex;
@@ -110,7 +111,7 @@ const Socials = () => {
   return(
     <SocialsContainer>
       {socials.map((icon) => (
-        <a href={icon.url} target='_blank' rel="noreferrer">
+        <a key={icon.url} href={icon.url} target='_blank' rel="noreferrer">
           {icon.svg}
         </a>
       ))}
@@ -136,7 +137,7 @@ const Header = () => {
     <Wrapper>
       <IntroContainer>
         <IntroText>
-          {intro.map((line) => line)}
+          {intro.map((line, i) => <React.Fragment key={i}>{line}</React.Fragment>)}
         </IntroText>
       <ImageContainer>
         <LaptopAndCat />

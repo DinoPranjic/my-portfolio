@@ -1,4 +1,7 @@
+import { useEffect } from "react";
 import styled from "styled-components";
+import Aos from 'aos';
+
 import theme from "../utils/theme";
 import { WSIETImage } from "../assets";
 import { ISSTrackerImage } from "../assets";
@@ -74,12 +77,14 @@ const ProjectStack = styled.h2`
   font-family: ${theme.fonts.secondary};
   font-size: 18px;
   color: ${theme.colours.purplePrimary};
+  font-weight: 500;
 `
 
 const ProjectDescription = styled.p`
   font-family: ${theme.fonts.secondary};
   font-size: 18px;
   color: ${theme.colours.font};
+  font-weight: 500;
 `
 
 const ProjectLink = styled.button`
@@ -134,6 +139,10 @@ const projects = [
 
 
 const Projects = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return(
     <>
       <Wrapper>
@@ -141,8 +150,10 @@ const Projects = () => {
           <Header id="projects">
             Projects
           </Header>
-        {projects.map((project, index) => (
-          <ProjectCard isReversed={index % 2 !== 0}>
+        {projects.map((project, index) => {
+          const isReversed = index % 2 !== 0;
+          return (
+          <ProjectCard key={project.title} isReversed={isReversed} data-aos={isReversed ? "slide-left" : "slide-right"}>
             <ProjectInfo>
               <div>
                 <ProjectTitle>{project.title}</ProjectTitle>
@@ -167,7 +178,7 @@ const Projects = () => {
               {project.image}
             </ProjectImage>
           </ProjectCard>
-        ))}
+        )})}
         </ProjectsContainer>
       </Wrapper>
     </>
