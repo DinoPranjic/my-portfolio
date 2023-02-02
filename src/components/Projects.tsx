@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import theme from "../utils/theme";
 import { WSIETImage } from "../assets";
+import { ISSTrackerImage } from "../assets";
+import { JabberImage } from "../assets";
 
 import Wrapper from "./Wrapper";
 
@@ -93,6 +95,33 @@ const ProjectLink = styled.button`
   font-weight: bold;
 `
 
+const projects = [
+  {
+    image: <WSIETImage />,
+    title: 'What Should I Eat Tonight?',
+    stack: 'React, TypeScript, Styled-Components, Rest API',
+    code: 'https://github.com/DinoPranjic/What-Should-I-Make-Tonight',
+    live: 'https://www.dinopranjic.dev/what-should-i-eat-tonight',
+    description: 'Returns a random recipe with full ingredients list, instructions and links to source and YouTube video.',
+  },
+  {
+    image: <ISSTrackerImage />,
+    title: 'ISS Tracker',
+    stack: 'React, TypeScript, Styled-Components, Rest API',
+    code: 'https://github.com/DinoPranjic/ISS-Tracker',
+    live: 'https://www.dinopranjic.dev/iss-tracker',
+    description: 'Track the position of the International Space Station on an interactive map.',
+  },
+  {
+    image: <JabberImage />,
+    title: 'Jabber',
+    stack: 'React, JavaScript, Redux, ExpressJS, Styled-Components, Firebase',
+    code: 'https://github.com/DinoPranjic/jabber',
+    live: 'https://jabber-cd1e1.web.app/',
+    description: 'A feature-rich, multi-user messaging app. Log in with Google, and chat with others Slack-style, or join a video call.',
+  }
+];
+
 
 
 const Projects = () => {
@@ -103,8 +132,8 @@ const Projects = () => {
           <Header id="projects">
             Projects
           </Header>
-        </ProjectsContainer>
-        <ProjectCard>
+        
+        {/* <ProjectCard>
           <ProjectInfo>
           <div>
           <ProjectTitle>What Should I Eat Tonight?</ProjectTitle>
@@ -131,7 +160,8 @@ const Projects = () => {
           <ProjectImage>
           <WSIETImage />
           </ProjectImage>
-        </ProjectCard>
+        </ProjectCard> */}
+        </ProjectsContainer>
       </Wrapper>
     </>
   )
