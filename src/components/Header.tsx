@@ -5,6 +5,8 @@ import Wrapper from './Wrapper';
 import { GithubIcon, LinkedInIcon, LaptopAndCat, ScrollIndicator} from "../assets"
 
 import theme from "../utils/theme";
+import { Accent } from "../utils/constants";
+
 import React from "react";
 
 const SocialsContainer = styled.div`
@@ -46,22 +48,6 @@ const Line = styled.span`
   display: block;
   width: 100%;
   /* max-width: calc(100vw - 50px); */
-`
-
-const IntroTextAccent = styled.span`
-  display: inline-block;
-  position: relative;
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: calc(100% + 10px);
-    height: 35%;
-    bottom: 5px;
-    left: -5px;
-    background-color: ${theme.colours.purpleAccent};
-
-  }
 `
 
 const IntroText = styled.h1`
@@ -127,7 +113,7 @@ const socials = [
 
 const intro = [
   <Line>Hi, I'm Dino.</Line>,
-  <Line>I'm a <IntroTextAccent>software developer</IntroTextAccent></Line>,
+  <Line>I'm a <Accent>software developer</Accent></Line>,
   <Line>based in Ontario, Canada.</Line>
 ];
 
