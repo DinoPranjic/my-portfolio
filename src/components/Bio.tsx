@@ -2,18 +2,14 @@ import styled from "styled-components";
 import Wrapper from "./Wrapper";
 import theme from "../utils/theme";
 
+import { BioImage } from "../assets";
+
 const BioContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 25px 50px 25px 50px;
-  margin: 100px 0px 100px 0px;
-
-  border: 6px solid ${theme.colours.purpleBackground};
-  border-radius: 28px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 50px 0px 100px 0px;
 
 `
 
@@ -21,8 +17,11 @@ const BioHeader = styled.h2`
   font-family: ${theme.fonts.secondary};
   font-size: 36px;
   color: ${theme.colours.font};
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 
+`
+
+const BioHeaderAccent = styled.span`
   display: inline-block;
   position: relative;
   &::after {
@@ -34,7 +33,31 @@ const BioHeader = styled.h2`
     bottom: 5px;
     left: -5px;
     background-color: ${theme.colours.purpleAccent};
+
   }
+`
+
+const BioContent = styled.div`
+  display: flex;
+`
+
+const BioText = styled.div`
+  display: flex;
+  flex: 0.4;
+  flex-direction: column;
+`
+
+const BioImageContainer = styled.div`
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    width: 40vw;
+    right: 140px;
+
+    svg {
+      width: 100%;
+    }
+
 `
 
 const BioParagraph = styled.p`
@@ -43,7 +66,6 @@ const BioParagraph = styled.p`
   font-weight: 500;
   color: ${theme.colours.font};
   margin-bottom: 20px;
-  text-align: center;
 `
 
 const paragraphs =  [
@@ -57,11 +79,18 @@ const Bio = () => {
       <Wrapper>
         <BioContainer>
           <BioHeader id="about">
-            About
+            <BioHeaderAccent>About</BioHeaderAccent>
           </BioHeader>
+          <BioContent>
+            <BioText>
             {paragraphs.map((paragraph) => (
               <BioParagraph>{paragraph}</BioParagraph>
             ))}
+            </BioText>
+              <BioImageContainer>
+              <BioImage />
+              </BioImageContainer>
+          </BioContent>
         </BioContainer>
 
       </Wrapper>
