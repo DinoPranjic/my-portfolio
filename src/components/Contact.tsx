@@ -28,6 +28,11 @@ const ContactLink = styled.a`
   font-size: 20px;
   font-weight: bold;
   color: #fff;
+  cursor: pointer;
+
+  :hover {
+    color: #cccccc;
+  }
 `
 
 const ContactFooter = styled.div`
@@ -47,8 +52,8 @@ const Contact = () => {
           <ContactMessage>Feel free to <Accent>reach out.</Accent></ContactMessage>
         </MessageContainer>
         <ContactFooter>
-          <ContactLink>LinkedIn</ContactLink>
-          <ContactLink>Github</ContactLink>
+          <ContactLink href='https://www.linkedin.com/in/dinopranjic1992' target='_blank'>LinkedIn</ContactLink>
+          <ContactLink href='https://github.com/DinoPranjic' target='_blank'>Github</ContactLink>
           <ContactLink>Email</ContactLink>
         </ContactFooter>
       </ContactContainer>
