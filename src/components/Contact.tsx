@@ -54,7 +54,7 @@ const Contact = () => {
         <ContactFooter>
           <ContactLink href='https://www.linkedin.com/in/dinopranjic1992' target='_blank'>LinkedIn</ContactLink>
           <ContactLink href='https://github.com/DinoPranjic' target='_blank'>Github</ContactLink>
-          <ContactLink>Email</ContactLink>
+          <ContactLink href="mailto:dino@dinopranjic.dev">Email</ContactLink>
         </ContactFooter>
       </ContactContainer>
     </>
