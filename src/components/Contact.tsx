@@ -43,8 +43,8 @@ const Contact = () => {
     <>
       <ContactContainer>
         <MessageContainer>
-          <ContactMessage>I'm looking to join a new team</ContactMessage>
-          <ContactMessage>Feel free to <Accent>reach out</Accent></ContactMessage>
+          <ContactMessage>I'm looking to join a new team.</ContactMessage>
+          <ContactMessage>Feel free to <Accent>reach out.</Accent></ContactMessage>
         </MessageContainer>
         <ContactFooter>
           <ContactLink>LinkedIn</ContactLink>
