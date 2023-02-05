@@ -128,9 +128,6 @@ const projects = [
 
 
 const Projects = () => {
-  useEffect(() => {
-    Aos.init();
-  }, []);
 
   return(
     <>
