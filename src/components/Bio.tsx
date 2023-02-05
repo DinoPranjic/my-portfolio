@@ -10,8 +10,8 @@ const BioContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 25px 50px 25px 50px;
-  margin: 50px 0px 200px 0px;
+  padding: 25px 50px 25px 0px;
+  margin-bottom: 200px;
 
 `
 
@@ -62,10 +62,10 @@ const Bio = () => {
   return(
     <>
       <Wrapper>
+        <BioHeader id="about">
+          <Accent>About</Accent>
+        </BioHeader>
         <BioContainer>
-          <BioHeader id="about">
-            <Accent>About</Accent>
-          </BioHeader>
           <BioContent>
             <BioText>
             {paragraphs.map((paragraph) => (
