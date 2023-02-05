@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Aos from 'aos';
 
 import theme from "../utils/theme";
+import { Accent } from "../utils/constants";
 import { WSIETImage } from "../assets";
 import { ISSTrackerImage } from "../assets";
 import { JabberImage } from "../assets";
@@ -13,27 +14,15 @@ const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+
 `
 
-const Header = styled.h2`
+const ProjectHeader = styled.h2`
   font-family: ${theme.fonts.secondary};
   font-size: 36px;
   color: ${theme.colours.font};
   margin-bottom: 100px;
 
-  display: inline-block;
-  position: relative;
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: calc(100% + 10px);
-    height: 35%;
-    bottom: 5px;
-    left: -5px;
-    background-color: ${theme.colours.purpleAccent};
-  }
 `
 
 const ProjectCard = styled.div<{ isReversed: boolean }>`
@@ -147,9 +136,9 @@ const Projects = () => {
     <>
       <Wrapper>
         <ProjectsContainer>
-          <Header id="projects">
-            Projects
-          </Header>
+          <ProjectHeader id="projects">
+            <Accent>Projects</Accent>
+          </ProjectHeader>
         {projects.map((project, index) => {
           const isReversed = index % 2 !== 0;
           return (
