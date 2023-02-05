@@ -99,12 +99,12 @@ const Skills = () => {
         <Accent>Skills</Accent>
       </SkillsHeader>
       <Container>
-      <SkillsContainer>
+      <SkillsContainer data-aos='zoom-in-right'>
         {stack.map((item) => (
           <Skill>{item}</Skill>
         ))}
       </SkillsContainer>
-      <ResumeContainer>
+      <ResumeContainer data-aos='zoom-in-left'>
         <ResumeIcon as={Resume} />
         <ResumeButton>
           <a href='#' target='_blank'>View My Resume</a>
