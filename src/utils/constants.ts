@@ -8,11 +8,10 @@ const Accent = styled.span`
     content: '';
     display: block;
     position: absolute;
-    width: calc(100% + 10px);
-    height: 35%;
-    bottom: 5px;
-    left: -5px;
-    background-color: ${theme.colours.purpleAccent};
+    width: calc(100%);
+    height: 10%;
+    bottom: 1px;
+    background-color: ${theme.colours.purplePrimary};
   }
 `;
 
