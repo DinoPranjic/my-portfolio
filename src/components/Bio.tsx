@@ -1,6 +1,8 @@
 import styled from "styled-components";
+
 import Wrapper from "./Wrapper";
 import theme from "../utils/theme";
+import { Accent } from "../utils/constants";
 
 import { BioImage } from "../assets";
 
@@ -19,22 +21,6 @@ const BioHeader = styled.h2`
   color: ${theme.colours.font};
   margin-bottom: 50px;
 
-`
-
-const BioHeaderAccent = styled.span`
-  display: inline-block;
-  position: relative;
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: calc(100% + 10px);
-    height: 35%;
-    bottom: 5px;
-    left: -5px;
-    background-color: ${theme.colours.purpleAccent};
-
-  }
 `
 
 const BioContent = styled.div`
@@ -79,7 +65,7 @@ const Bio = () => {
       <Wrapper>
         <BioContainer>
           <BioHeader id="about">
-            <BioHeaderAccent>About</BioHeaderAccent>
+            <Accent>About</Accent>
           </BioHeader>
           <BioContent>
             <BioText>
