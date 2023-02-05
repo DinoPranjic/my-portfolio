@@ -65,6 +65,7 @@ const IntroContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   height: calc(100vh - 34px);
+  margin-bottom: 50px;
 
 `
 
