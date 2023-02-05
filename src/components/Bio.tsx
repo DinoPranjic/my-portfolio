@@ -11,7 +11,7 @@ const BioContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 25px 50px 25px 50px;
-  margin: 50px 0px 100px 0px;
+  margin: 50px 0px 200px 0px;
 
 `
 
@@ -36,7 +36,6 @@ const BioText = styled.div`
 const BioImageContainer = styled.div`
     display: flex;
     position: absolute;
-    z-index: -1;
     width: 40vw;
     right: 140px;
 
