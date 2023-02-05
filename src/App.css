@@ -8,9 +8,21 @@ html {
   box-sizing: border-box;
 }
 
-div, h1, h2, p, body, a, header, span, svg {
+div {
+  overflow-x: hidden;
+}
+
+div, h1, h2, p, body, a, header, span, svg, ul {
   margin: 0;
   padding: 0;
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
 }
 
 a {

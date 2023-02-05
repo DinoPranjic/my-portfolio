@@ -140,8 +140,8 @@ const Header = () => {
         <LinksContainer>
           <a href='#about'>about</a>
           <a href='#projects'>projects</a>
-          <a href='#'>skills</a>
-          <a href='#'>contact</a>
+          <a href='#skills'>skills</a>
+          <a href='#contact'>contact</a>
         </LinksContainer>
       </Nav>
 
