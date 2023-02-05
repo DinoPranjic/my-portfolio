@@ -72,10 +72,10 @@ const IntroContainer = styled.div`
 const ScrollContainer = styled.div`
     display: flex;
     justify-content: center;
+    overflow-x: visible;
 
     .scroll {
     animation: MoveUpDown 2s linear infinite;
-
   }
 
   @keyframes MoveUpDown {
