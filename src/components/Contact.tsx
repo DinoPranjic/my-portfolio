@@ -45,7 +45,7 @@ const ContactFooter = styled.div`
 
 const Contact = () => {
   return (
-    <>
+    <footer>
       <ContactContainer id='contact'>
         <MessageContainer>
           <ContactMessage>I'm looking to join a new team.</ContactMessage>
@@ -57,7 +57,7 @@ const Contact = () => {
           <ContactLink href="mailto:dino@dinopranjic.dev">Email</ContactLink>
         </ContactFooter>
       </ContactContainer>
-    </>
+    </ footer>
   )
 };
 
