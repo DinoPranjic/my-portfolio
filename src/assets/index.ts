@@ -7,6 +7,7 @@ import { ReactComponent as WSIETImage } from './wsiet-image.svg';
 import { ReactComponent as ScrollIndicator } from './scroll-indicator.svg';
 import { ReactComponent as BioImage } from './bio-image.svg';
 import { ReactComponent as Resume } from './resume-image.svg';
+import { ReactComponent as Seamus } from './seamus.svg';
 
 export {
   GithubIcon,
@@ -17,5 +18,6 @@ export {
   WSIETImage,
   ScrollIndicator,
   BioImage,
-  Resume
+  Resume,
+  Seamus
 };
