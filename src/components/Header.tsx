@@ -28,7 +28,7 @@ const Nav = styled.nav`
 `
 
 const LinksContainer = styled.div`
-  flex: 0.3;
+  width: 30%;
   display: flex;
   justify-content: space-between;
 
@@ -154,7 +154,7 @@ const Header = () => {
           <a href='#about'>about</a>
           <a href='#projects'>projects</a>
           <a href='#skills'>skills</a>
-          <a href='#contact'>contact</a>
+          <a href='mailto:dino@dinopranjic.dev'>contact</a>
         </LinksContainer>
       </Nav>
 
