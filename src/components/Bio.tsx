@@ -1,16 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import Wrapper from "./Wrapper";
 import theme from "../utils/theme";
 import { Accent } from "../utils/constants";
 
-import { BioImage } from "../assets";
+import { BioImage, Seamus } from "../assets";
 
 const BioContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 25px 50px 25px 0px;
+  padding: 25px 0px 25px 0px;
   margin-bottom: 200px;
 
 `
@@ -25,24 +25,42 @@ const BioHeader = styled.h2`
 
 const BioContent = styled.div`
   display: flex;
+  justify-content: space-between;
 `
 
 const BioText = styled.div`
   display: flex;
-  flex: 0.4;
+  width: 40%;
   flex-direction: column;
 `
 
 const BioImageContainer = styled.div`
     display: flex;
-    position: absolute;
-    width: 40vw;
-    right: 140px;
+    width: 50%;
+    position: relative;
+`
 
-    svg {
-      width: 100%;
-    }
-
+const BioSvg = styled.svg`
+  width: 100%;
+  margin-top: 20px;
+`
+const SeamusAnimation = keyframes`
+  0% {
+    transform: translateY(0);
+  } 
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+`
+const SeamusIcon = styled.svg`
+  position: absolute;
+  top: 30px;
+  right: 30%;
+  z-index: -1;
+  animation: ${SeamusAnimation} 3s ease infinite;
 `
 
 const BioParagraph = styled.p`
@@ -56,7 +74,7 @@ const BioParagraph = styled.p`
 const paragraphs =  [
   "Hey there! I'm Dino. I'm a full stack software developer living in Ontario, Canada. I first began programming as a kid, building simple text-based computer games with C++. Today, I'm lucky enough to have turned that initial love for programming into a career.",
   "I'm passionate about the environment and sustainability and would love to work with like minded individuals. When I'm not coding, I spend most of my time outdoors fishing, camping and hiking."
-]
+];
 
 const Bio = () => {
   return(
@@ -73,7 +91,8 @@ const Bio = () => {
             ))}
             </BioText>
               <BioImageContainer>
-              <BioImage />
+                <SeamusIcon as={Seamus} />
+                <BioSvg as={BioImage} />
               </BioImageContainer>
           </BioContent>
         </BioContainer>
