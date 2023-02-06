@@ -9,6 +9,10 @@ const theme = {
   fonts: {
     main: 'Arimo',
     secondary: 'Roboto'
+  },
+  mediaQuery: {
+    mobile: '@media (max-width: 450px)',
+    tablet: '@media (max-width: 820px)'
   }
 }
 
