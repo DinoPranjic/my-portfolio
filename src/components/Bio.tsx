@@ -60,6 +60,10 @@ const BioSvg = styled.svg`
   ${theme.mediaQuery.mobile} {
     display: none;
   }
+
+  ${theme.mediaQuery.widescreen} {
+    margin-top: 40px;
+  }
 `
 const SeamusAnimation = keyframes`
   0% {
@@ -74,7 +78,7 @@ const SeamusAnimation = keyframes`
 `
 const SeamusIcon = styled.svg`
   position: absolute;
-  top: 30px;
+  top: 35px;
   right: 30%;
   z-index: -1;
   animation: ${SeamusAnimation} 3s ease infinite;
@@ -85,6 +89,10 @@ const SeamusIcon = styled.svg`
 
   ${theme.mediaQuery.tablet} {
     top: 90px;
+  }
+
+  ${theme.mediaQuery.widescreen} {
+    top: 40px;
   }
 `
 

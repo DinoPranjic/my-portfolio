@@ -107,6 +107,7 @@ const ScrollContainer = styled.div`
     display: flex;
     justify-content: center;
     overflow-x: visible;
+    padding-top: 40px;
 
     .scroll {
     animation: MoveUpDown 2s linear infinite;
@@ -118,6 +119,10 @@ const ScrollContainer = styled.div`
 
   ${theme.mediaQuery.tablet} {
     display: none;
+  }
+
+  ${theme.mediaQuery.widescreen} {
+    padding-top: 150px;
   }
 
   @keyframes MoveUpDown {
@@ -136,7 +141,7 @@ const ImageContainer = styled.div`
   z-index: -1;
   width: 40vw;
   right: 100px;
-  bottom: 0;
+  bottom: 50px;
 
   svg {
     width: 100%;
