@@ -33,6 +33,10 @@ const ProjectCard = styled.div<{ isReversed: boolean }>`
   border-radius: 28px;
   margin-bottom: 100px;
   ${(props) => props.isReversed && 'flex-direction: row-reverse;'}
+
+  ${theme.mediaQuery.mobile} {
+    flex-direction: column-reverse;
+  }
 `
 
 const ProjectInfo = styled.div`
@@ -40,6 +44,10 @@ const ProjectInfo = styled.div`
   flex-direction: column;
   justify-content: space-between;
   max-width: 50%;
+
+  ${theme.mediaQuery.mobile} {
+    max-width: 100%;
+  }
 
 `
 
@@ -59,6 +67,10 @@ const ProjectTitle = styled.h2`
   font-family: ${theme.fonts.secondary};
   font-size: 28px;
   color: ${theme.colours.font};
+
+  ${theme.mediaQuery.mobile} {
+    margin-top: 10px;
+  }
   
 `
 
@@ -74,6 +86,10 @@ const ProjectDescription = styled.p`
   font-size: 18px;
   color: ${theme.colours.font};
   font-weight: 500;
+
+  ${theme.mediaQuery.mobile} {
+    margin-top: 10px;
+  }
 `
 
 const ProjectLink = styled.button`
@@ -94,6 +110,14 @@ const ProjectLink = styled.button`
 
   :hover {
     background: ${theme.colours.buttonHover};
+  }
+
+  ${theme.mediaQuery.mobile} {
+    margin-top: 10px;
+
+    a {
+      font-size: 16px;
+    }
   }
 
 `
