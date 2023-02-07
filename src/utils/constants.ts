@@ -12,6 +12,7 @@ const Accent = styled.span`
     height: 10%;
     bottom: 1px;
     background-color: ${theme.colours.purplePrimary};
+    z-index: -1;
   }
 `;
 
