@@ -13,6 +13,11 @@ const BioContainer = styled.div`
   padding: 25px 0px 25px 0px;
   margin-bottom: 200px;
 
+  ${theme.mediaQuery.mobile} {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+
 `
 
 const BioHeader = styled.h2`
@@ -26,12 +31,20 @@ const BioHeader = styled.h2`
 const BioContent = styled.div`
   display: flex;
   justify-content: space-between;
+
+  ${theme.mediaQuery.mobile} {
+    flex-direction: column;
+  }
 `
 
 const BioText = styled.div`
   display: flex;
   width: 40%;
   flex-direction: column;
+
+  ${theme.mediaQuery.mobile} {
+    width: 100%;
+  }
 `
 
 const BioImageContainer = styled.div`
@@ -43,6 +56,10 @@ const BioImageContainer = styled.div`
 const BioSvg = styled.svg`
   width: 100%;
   margin-top: 20px;
+
+  ${theme.mediaQuery.mobile} {
+    display: none;
+  }
 `
 const SeamusAnimation = keyframes`
   0% {
@@ -61,6 +78,10 @@ const SeamusIcon = styled.svg`
   right: 30%;
   z-index: -1;
   animation: ${SeamusAnimation} 3s ease infinite;
+
+  ${theme.mediaQuery.mobile} {
+    display: none;
+  }
 `
 
 const BioParagraph = styled.p`
