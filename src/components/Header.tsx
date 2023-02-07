@@ -49,6 +49,10 @@ const LinksContainer = styled.div`
   ${theme.mediaQuery.mobile} {
     width: 100%;
   }
+
+  ${theme.mediaQuery.tablet} {
+    width: 50%;
+  }
 `
 
 const Line = styled.span`
