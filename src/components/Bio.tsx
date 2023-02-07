@@ -82,6 +82,10 @@ const SeamusIcon = styled.svg`
   ${theme.mediaQuery.mobile} {
     display: none;
   }
+
+  ${theme.mediaQuery.tablet} {
+    top: 90px;
+  }
 `
 
 const BioParagraph = styled.p`

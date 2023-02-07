@@ -47,7 +47,8 @@ const LinksContainer = styled.div`
   }
 
   ${theme.mediaQuery.mobile} {
-    width: 100%;
+    display: none;
+
   }
 
   ${theme.mediaQuery.tablet} {
@@ -96,8 +97,8 @@ const IntroContainer = styled.div`
   margin-bottom: 50px;
 
   ${theme.mediaQuery.mobile} {
-    height: calc(80vh)
-
+    height: 80vh;
+    margin-bottom: 100px;
   }
 
 `
