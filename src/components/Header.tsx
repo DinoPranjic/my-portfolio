@@ -134,7 +134,7 @@ const ImageContainer = styled.div`
   }
 
   ${theme.mediaQuery.mobile} {
-    display: none;
+    width: 60vw;
   }
 `
 
