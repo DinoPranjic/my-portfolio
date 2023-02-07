@@ -98,7 +98,9 @@ const BioParagraph = styled.p`
 
 const paragraphs =  [
   "Hey there! I'm Dino. I'm a full stack software developer living in Ontario, Canada. I first began programming as a kid, building simple text-based computer games with C++. Today, I'm lucky enough to have turned that initial love for programming into a career.",
-  "I'm passionate about the environment and sustainability and would love to work with like minded individuals. When I'm not coding, I spend most of my time outdoors fishing, camping and hiking."
+  "I have over 10 years of experience in the food services industry, 5 of which I owned and operated my own restaurant. Having used different web technologies to promote my businesses, I believe this gives me a unique ability to build creative tech solutions today.",
+  "I'm passionate about the environment and sustainability and would love to work with like minded individuals. When I'm not coding, I spend most of my time outdoors fishing, camping and hiking.",
+  "I’m also open to freelance projects, if you have a cool idea in mind, get in touch via dino@dinopranjic.dev."
 ];
 
 const Bio = () => {
