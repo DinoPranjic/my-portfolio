@@ -111,6 +111,10 @@ const ScrollContainer = styled.div`
     display: none;
   }
 
+  ${theme.mediaQuery.tablet} {
+    display: none;
+  }
+
   @keyframes MoveUpDown {
     0%, 100% {
       transform: translateY(125px);
