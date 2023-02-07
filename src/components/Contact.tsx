@@ -44,10 +44,14 @@ const ContactFooter = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 30vw;
+  width: 50%;
   margin-top: 100px;
 
   ${theme.mediaQuery.mobile} {
+    width: 100%;
+  }
+
+  ${theme.mediaQuery.tablet} {
     width: 100%;
   }
 `
