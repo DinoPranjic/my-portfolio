@@ -8,12 +8,14 @@ const WrapperContainer = styled.div`
   margin: 0 auto;
 
   ${theme.mediaQuery.mobile} {
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     overflow-x: hidden;
   }
 
   ${theme.mediaQuery.tablet} {
-    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
     overflow-x: hidden;
   }
 `
