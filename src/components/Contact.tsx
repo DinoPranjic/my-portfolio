@@ -9,12 +9,17 @@ const ContactContainer = styled.div`
   align-items: center;
   background-color: ${theme.colours.font};
   padding: 100px 200px 20px 200px;
+
+  ${theme.mediaQuery.mobile} {
+    padding: 20px 40px 5px 40px;
+  }
 `
 
 const MessageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
 
 `
 const ContactMessage = styled.h2`
@@ -41,6 +46,10 @@ const ContactFooter = styled.div`
   align-items: center;
   width: 30vw;
   margin-top: 100px;
+
+  ${theme.mediaQuery.mobile} {
+    width: 100%;
+  }
 `
 
 const Contact = () => {
