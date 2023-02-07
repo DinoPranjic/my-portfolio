@@ -126,7 +126,7 @@ const Skills = () => {
       <ResumeContainer data-aos='zoom-in-left'>
         <ResumeIcon as={Resume} />
         <ResumeButton>
-          <a href='#' target='_blank'>View My Resume</a>
+          <a href='/assets/resume.pdf' target='_blank'>View My Resume</a>
         </ResumeButton>
       </ResumeContainer>
       </Container>
