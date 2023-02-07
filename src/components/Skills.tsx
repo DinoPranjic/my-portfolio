@@ -9,6 +9,11 @@ const Container = styled.div`
   flex-wrap: nowrap;
   flex-direction: row;
   margin-bottom: 100px;
+
+  ${theme.mediaQuery.mobile} {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
 `;
 
 const SkillsContainer = styled.ul`
@@ -19,6 +24,12 @@ const SkillsContainer = styled.ul`
   list-style-type: none;
   width: 50%;
   height: 50%;
+
+  ${theme.mediaQuery.mobile} {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 `
 
 const ResumeContainer = styled.div`
@@ -27,6 +38,10 @@ const ResumeContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   width: 50%;
+
+  ${theme.mediaQuery.mobile} {
+    width: 100%;
+  }
 `
 
 const ResumeIcon = styled.svg`
@@ -59,6 +74,10 @@ const SkillsHeader = styled.h2`
   font-size: 36px;
   color: ${theme.colours.font};
   margin-bottom: 100px;
+
+  ${theme.mediaQuery.mobile} {
+    margin-bottom: 50px;
+  }
 `
 
 const Skill = styled.li`

@@ -23,6 +23,10 @@ const ProjectHeader = styled.h2`
   color: ${theme.colours.font};
   margin-bottom: 100px;
 
+  ${theme.mediaQuery.mobile} {
+    margin-bottom: 50px;
+  }
+
 `
 
 const ProjectCard = styled.div<{ isReversed: boolean }>`
