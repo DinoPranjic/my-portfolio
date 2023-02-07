@@ -41,6 +41,10 @@ const ProjectCard = styled.div<{ isReversed: boolean }>`
   ${theme.mediaQuery.mobile} {
     flex-direction: column-reverse;
   }
+
+  ${theme.mediaQuery.tablet} {
+    padding: 25px;
+  }
 `
 
 const ProjectInfo = styled.div`
