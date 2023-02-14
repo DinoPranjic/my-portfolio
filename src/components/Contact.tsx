@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Accent } from "../utils/constants";
 
 import theme from "../utils/theme";
 
@@ -27,6 +26,20 @@ const ContactMessage = styled.h2`
   font-size: 40px;
   color: #fff;
 `
+
+const ContactAccent = styled.span`
+  display: inline-block;
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100%);
+    height: 10%;
+    bottom: 1px;
+    background-color: ${theme.colours.purplePrimary};
+  }
+`;
 
 const ContactLink = styled.a`
   font-family: ${theme.fonts.main};
@@ -62,7 +75,7 @@ const Contact = () => {
       <ContactContainer id='contact'>
         <MessageContainer>
           <ContactMessage>I'm looking to join a new team.</ContactMessage>
-          <ContactMessage>Feel free to <Accent>reach out.</Accent></ContactMessage>
+          <ContactMessage>Feel free to <ContactAccent>reach out.</ContactAccent></ContactMessage>
         </MessageContainer>
         <ContactFooter>
           <ContactLink href='https://www.linkedin.com/in/dinopranjic1992' target='_blank'>LinkedIn</ContactLink>
