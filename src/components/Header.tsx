@@ -22,14 +22,14 @@ const SocialsContainer = styled.div`
     width: 30px;
     margin-right: 5px;
   }
-`
+`;
 
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 25px 25px 0 25px;
-`
+`;
 
 const LinksContainer = styled.div`
   width: 30%;
@@ -54,12 +54,12 @@ const LinksContainer = styled.div`
   ${theme.mediaQuery.tablet} {
     width: 50%;
   }
-`
+`;
 
 const Line = styled.span`
   display: block;
   width: 100%;
-`
+`;
 
 const IntroText = styled.h1`
   display: flex;
@@ -72,7 +72,12 @@ const IntroText = styled.h1`
   ${theme.mediaQuery.mobile} {
     font-size: 30px;
   }
-`
+
+  @media (max-width: 1150px) {
+    padding-bottom: 0;
+    padding-top: 50px;
+  }
+`;
 
 const IntroTextAccent = styled.span`
   display: inline-block;
@@ -87,7 +92,7 @@ const IntroTextAccent = styled.span`
     left: -5px;
     background-color: ${theme.colours.purpleAccent};
   }
-`
+`;
 
 const IntroContainer = styled.div`
   display: flex;
@@ -100,8 +105,7 @@ const IntroContainer = styled.div`
     height: 80vh;
     margin-bottom: 100px;
   }
-
-`
+`;
 
 const ScrollContainer = styled.div`
     display: flex;
@@ -125,6 +129,10 @@ const ScrollContainer = styled.div`
     padding-top: 150px;
   }
 
+  @media (max-width: 1150px) {
+    display: none;
+  }
+
   @keyframes MoveUpDown {
     0%, 100% {
       transform: translateY(125px);
@@ -132,9 +140,8 @@ const ScrollContainer = styled.div`
     50% {
       transform: translateY(100px);
     }
-
 }
-`
+`;
 
 const ImageContainer = styled.div`
   position: absolute;
@@ -150,7 +157,18 @@ const ImageContainer = styled.div`
   ${theme.mediaQuery.mobile} {
     width: 60vw;
   }
-`
+
+  @media (max-width: 1150px) {
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+    left: 200px;
+  }
+
+  @media (max-width: 565px) {
+    bottom: 100px;
+  }
+`;
 
 const socials = [
   {

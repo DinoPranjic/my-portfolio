@@ -18,7 +18,7 @@ const WrapperContainer = styled.div`
     padding-right: 50px;
     overflow-x: hidden;
   }
-`
+`;
 
 const Wrapper = ({ children }: {children: ReactNode}) => {
   return(
@@ -26,6 +26,6 @@ const Wrapper = ({ children }: {children: ReactNode}) => {
       {children}
     </WrapperContainer>
   )
-}
+};
 
 export default Wrapper;

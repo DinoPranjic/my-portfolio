@@ -14,6 +14,11 @@ const Container = styled.div`
     flex-direction: column;
     margin-bottom: 50px;
   }
+
+  @media (max-width: 630px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const SkillsContainer = styled.ul`
@@ -30,7 +35,14 @@ const SkillsContainer = styled.ul`
     width: 100%;
     margin-bottom: 10px;
   }
-`
+
+  @media (max-width: 630px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+`;
 
 const ResumeContainer = styled.div`
   display: flex;
@@ -42,11 +54,16 @@ const ResumeContainer = styled.div`
   ${theme.mediaQuery.mobile} {
     width: 100%;
   }
-`
+
+  @media (max-width: 630px) {
+    width: 100%;
+    margin-top: 20px;
+  }
+`;
 
 const ResumeIcon = styled.svg`
   height: 300px;
-`
+`;
 
 const ResumeButton = styled.button`
   cursor: pointer;
@@ -67,7 +84,7 @@ const ResumeButton = styled.button`
   :hover {
     background: ${theme.colours.buttonHover};
   }
-`
+`;
 
 const SkillsHeader = styled.h2`
   font-family: ${theme.fonts.secondary};
@@ -78,7 +95,11 @@ const SkillsHeader = styled.h2`
   ${theme.mediaQuery.mobile} {
     margin-bottom: 50px;
   }
-`
+
+  @media (max-width: 630px) {
+    margin-bottom: 30px;
+  }
+`;
 
 const Skill = styled.li`
   display: block;
@@ -88,7 +109,7 @@ const Skill = styled.li`
   margin: 0 10px 10px 0;
   color: #fff;
   font-weight: bold;
-`
+`;
 
 
 const stack = [

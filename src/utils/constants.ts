@@ -18,4 +18,4 @@ const Accent = styled.span`
 
 export {
   Accent
-}
+};

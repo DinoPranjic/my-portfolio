@@ -14,8 +14,7 @@ const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-`
+`;
 
 const ProjectHeader = styled.h2`
   font-family: ${theme.fonts.secondary};
@@ -27,7 +26,10 @@ const ProjectHeader = styled.h2`
     margin-bottom: 50px;
   }
 
-`
+  @media (max-width: 630px) {
+    margin-bottom: 50px;
+  }
+`;
 
 const ProjectCard = styled.div<{ isReversed: boolean }>`
   display: flex;
@@ -45,7 +47,7 @@ const ProjectCard = styled.div<{ isReversed: boolean }>`
   ${theme.mediaQuery.tablet} {
     padding: 25px;
   }
-`
+`;
 
 const ProjectInfo = styled.div`
   display: flex;
@@ -56,8 +58,7 @@ const ProjectInfo = styled.div`
   ${theme.mediaQuery.mobile} {
     max-width: 100%;
   }
-
-`
+`;
 
 const ProjectImage = styled.div`
   display: flex;
@@ -69,7 +70,7 @@ const ProjectImage = styled.div`
     width: 100%;
     height: 100%;
   }
-`
+`;
 
 const ProjectTitle = styled.h2`
   font-family: ${theme.fonts.secondary};
@@ -79,15 +80,14 @@ const ProjectTitle = styled.h2`
   ${theme.mediaQuery.mobile} {
     margin-top: 10px;
   }
-  
-`
+`;
 
 const ProjectStack = styled.h2`
   font-family: ${theme.fonts.secondary};
   font-size: 18px;
   color: ${theme.colours.purplePrimary};
   font-weight: 500;
-`
+`;
 
 const ProjectDescription = styled.p`
   font-family: ${theme.fonts.secondary};
@@ -98,7 +98,7 @@ const ProjectDescription = styled.p`
   ${theme.mediaQuery.mobile} {
     margin-top: 10px;
   }
-`
+`;
 
 const ProjectLink = styled.button`
   cursor: pointer;
@@ -120,6 +120,14 @@ const ProjectLink = styled.button`
     background: ${theme.colours.buttonHover};
   }
 
+  @media (max-width: 940px) {
+    margin-top: 10px;
+  }
+
+  ${theme.mediaQuery.tablet} {
+    margin-top: 10px;
+  }
+
   ${theme.mediaQuery.mobile} {
     margin-top: 10px;
 
@@ -127,8 +135,7 @@ const ProjectLink = styled.button`
       font-size: 16px;
     }
   }
-
-`
+`;
 
 const projects = [
   {
@@ -201,6 +208,6 @@ const Projects = () => {
       </Wrapper>
     </>
   )
-}
+};
 
 export default Projects;

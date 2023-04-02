@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Projects from './components/Projects';
@@ -17,6 +16,6 @@ function App() {
       <Contact />
     </div>
   );
-}
+};
 
 export default App;

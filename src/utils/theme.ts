@@ -15,6 +15,6 @@ const theme = {
     tablet: '@media (max-width: 820px)',
     widescreen: '@media (min-width: 1400px)'
   }
-}
+};
 
 export default theme;

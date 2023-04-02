@@ -12,20 +12,23 @@ const ContactContainer = styled.div`
   ${theme.mediaQuery.mobile} {
     padding: 20px 40px 5px 40px;
   }
-`
+
+  @media (max-width: 625px) {
+    padding: 50px 100px 10px 100px;
+  }
+`;
 
 const MessageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
 
-
-`
 const ContactMessage = styled.h2`
   font-family: ${theme.fonts.main};
   font-size: 40px;
   color: #fff;
-`
+`;
 
 const ContactAccent = styled.span`
   display: inline-block;
@@ -51,7 +54,7 @@ const ContactLink = styled.a`
   :hover {
     color: #cccccc;
   }
-`
+`;
 
 const ContactFooter = styled.div`
   display: flex;
@@ -67,7 +70,7 @@ const ContactFooter = styled.div`
   ${theme.mediaQuery.tablet} {
     width: 100%;
   }
-`
+`;
 
 const Contact = () => {
   return (
